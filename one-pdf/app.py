@@ -18,7 +18,7 @@ def main():
     # upload file
     pdf = st.file_uploader("Carga tu PDF", type="pdf")
     
-    # extract the text
+    # extract the text from the pdf
     if pdf is not None:
       pdf_reader = PdfReader(pdf)
       text = ""
