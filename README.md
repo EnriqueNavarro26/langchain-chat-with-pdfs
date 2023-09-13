@@ -4,7 +4,7 @@ This is a Python application that allows you to load a PDF and ask questions abo
 
 ## How it works
 
-If you want to work with only one pdf, please place it in the 'one-pdf' directory. This also works for books (with only one pdf). On the other hand, if you have two or more pdfs, your directory will be 'multiples-pdfs'. Both work in the same way. 
+If you want to work with only one pdf, please place it in the `one-pdf` directory. This also works for books (with only one pdf). On the other hand, if you have two or more pdfs, your directory will be `multiples-pdfs`. Both work in the same way. 
 
 The applications reads the PDF (or PDFs) and splits the text into smaller chunks that can be then fed into a LLM. It uses OpenAI embeddings to create vector representations of the chunks. The application then finds the chunks that are semantically similar to the question that the user asked and feeds those chunks to the LLM to generate a response.
 
