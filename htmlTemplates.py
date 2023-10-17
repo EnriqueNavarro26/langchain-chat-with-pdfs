@@ -1,44 +1,34 @@
 css = '''
 <style>
 .chat-message {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-    display: flex;
+    padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1rem; display: flex
 }
 .chat-message.user {
-    background-color: #2b313e;
+    background-color: #2b313e
 }
 .chat-message.bot {
-    background-color: #475063;
+    background-color: #475063
 }
 .chat-message .avatar {
-    width: 20%;
-}
-.chat-message .avatar-container {
-    width: 78px; /* Ancho cuadrado deseado */
-    height: 78px; /* Alto cuadrado deseado */
-    overflow: hidden; /* Recorta cualquier contenido que se desborde */
+  width: 20%;
 }
 .chat-message .avatar img {
-    width: 100%; /* Asegura que la imagen llene el contenedor cuadrado */
-    height: auto;
-    border-radius: 50%; /* Hace que la imagen sea redonda */
-    object-fit: cover;
+  max-width: 78px;
+  max-height: 78px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .chat-message .message {
-    width: 80%;
-    padding: 0 1.5rem;
-    color: #fff;
+  width: 80%;
+  padding: 0 1.5rem;
+  color: #fff;
 }
 '''
 
 bot_template = '''
 <div class="chat-message bot">
     <div class="avatar">
-        <div class="avatar-container">
-            <img src="https://cdn.pixabay.com/photo/2023/02/05/17/33/ai-generated-7770055_1280.jpg">
-        </div>
+        <img src="https://i.ibb.co/cN0nmSj/Screenshot-2023-05-28-at-02-37-21.png" style="max-height: 78px; max-width: 78px; border-radius: 50%; object-fit: cover;">
     </div>
     <div class="message">{{MSG}}</div>
 </div>
@@ -47,10 +37,8 @@ bot_template = '''
 user_template = '''
 <div class="chat-message user">
     <div class="avatar">
-        <div class="avatar-container">
-            <img src="https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_1280.jpg">
-        </div>    
-    </div>
+        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" style="max-height: 78px; max-width: 78px; border-radius: 50%; object-fit: cover;">
+    </div>    
     <div class="message">{{MSG}}</div>
 </div>
 '''

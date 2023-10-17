@@ -16,10 +16,10 @@ def main():
     openai.api_key = os.getenv("OPENAI_API_KEY")
     
     st.set_page_config(page_title="Ask your PDF")
-    st.header("💬 Pregunta a tu PDF 💬")
+    st.header("💬 Ask questions of your PDF 💬")
     
-    # upload file
-    pdf = st.file_uploader("Carga tu PDF", type="pdf")
+    # upload files
+    pdf = st.file_uploader("Load your PDF", type="pdf")
     
     # extract the text from the pdf
     if pdf is not None:
@@ -55,6 +55,5 @@ def main():
         st.write(response)
         
 
-            
 if __name__ == '__main__':
     main()
