@@ -6,7 +6,7 @@ This is a Python application that allows you to load a PDF and ask questions abo
 
 ## How it works
 
-If you want to work with only one pdf, please place it in the `one-pdf` directory. This also works for books (with only one pdf). On the other hand, if you have two or more pdfs, your directory will be `multiples-pdfs`. Both work in the same way. 
+If you want to work with only one pdf, please place it in the `one-pdf` directory. This also works for books (with only one pdf). On the other hand, if you have two or more pdfs, your directory will be `multiples-pdfs`.(also accepts a single pdf) Both work in the same way. 
 
 The applications reads the PDF (or PDFs) and splits the text into smaller chunks that can be then fed into a LLM. It uses OpenAI embeddings to create vector representations of the chunks. The application then finds the chunks that are semantically similar to the question that the user asked and feeds those chunks to the LLM to generate a response.
 
@@ -31,6 +31,20 @@ To use the application, run the `app.py` file with the streamlit CLI (after havi
 ```
 streamlit run app.py
 ```
+
+## Use with HuggingFace
+```
+HUGGINGFACEHUB_API_TOKEN="<your key">
+
+# For Huggingface Embeddings
+embeddings = HuggingFaceInstructEmbeddings(model_name = "hkunlp/instructor-xl")
+
+# For Huggingface LLM
+llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
+
+```
+
+
 ## Contributing
 
 This repository is for educational purposes only and is not intended to receive further contributions. 
